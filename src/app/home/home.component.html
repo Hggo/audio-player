@@ -21,22 +21,12 @@
             </span>
         </div>
 
-        <div class="song">
+        <div class="song" *ngFor="let song of songs">
             <span class="title">
-                I am the highway
+                {{song.title}}
             </span>
             <span class="artist">
-                Audioslave
-            </span>
-            <svg-icon src="../assets/icons/play-solid.svg" [svgStyle]="{ 'width.px':14 }"></svg-icon>
-        </div>
-
-        <div class="song active">
-            <span class="title">
-                Black Hole Sun
-            </span>
-            <span>
-                Chris Cornell
+                {{song.artist}}
             </span>
             <svg-icon src="../assets/icons/play-solid.svg" [svgStyle]="{ 'width.px':14 }"></svg-icon>
         </div>
