@@ -28,7 +28,7 @@
             <span class="artist">
                 {{song.artist}}
             </span>
-            <svg-icon src="../assets/icons/play-solid.svg" [svgStyle]="{ 'width.px':14 }"></svg-icon>
+            <svg-icon (click)="playSong(song)" class="clickable" src="../assets/icons/play-solid.svg" [svgStyle]="{ 'width.px':14 }"></svg-icon>
         </div>
     </div>
 </div>
@@ -46,10 +46,10 @@
         </span>
     </div>
     <div class="controls">
-        <span class="time">0:04</span>
+        <span class="time">{{currentSong.currentTime}}</span>
         <div class="progress">
-            <div class="fill"></div>
+            <div class="fill" [ngStyle]="{'width': currentSong.percentage + '%'}"></div>
         </div>
-        <span class="time">6:04</span>
+        <span class="time">{{currentSong.currentLength}}</span>
     </div>
 </div>
