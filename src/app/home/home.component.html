@@ -1,0 +1,65 @@
+<div class="playlist-container">
+    <div class="playlist-header">
+        <span class="playlist-cover">
+        </span>
+        <span class="playlist-details">
+            <div class="playlist-title">Título da playlist</div>
+            <div class="playlist-description">
+                Playlist foda pra cacete
+                perfeita pra curtir a bad
+                e a quarentena
+            </div>
+        </span>
+    </div>
+    <div class="playlist-songs">
+        <div class="songs-header">
+            <span class="title">
+                Título
+            </span>
+            <span class="artist">
+                Artista
+            </span>
+        </div>
+
+        <div class="song">
+            <span class="title">
+                I am the highway
+            </span>
+            <span class="artist">
+                Audioslave
+            </span>
+            <svg-icon src="../assets/icons/play-solid.svg" [svgStyle]="{ 'width.px':14 }"></svg-icon>
+        </div>
+
+        <div class="song active">
+            <span class="title">
+                Black Hole Sun
+            </span>
+            <span>
+                Chris Cornell
+            </span>
+            <svg-icon src="../assets/icons/play-solid.svg" [svgStyle]="{ 'width.px':14 }"></svg-icon>
+        </div>
+    </div>
+</div>
+
+<div class="player">
+    <div class="controls">
+        <span>
+            <svg-icon src="../assets/icons/step-backward-solid.svg" [svgStyle]="{ 'width.px':20 }"></svg-icon>
+        </span>
+        <span class="play-button">
+            <svg-icon src="../assets/icons/play-circle-solid.svg" [svgStyle]="{ 'width.px':40 }"></svg-icon>
+        </span>
+        <span>
+            <svg-icon src="../assets/icons/step-forward-solid.svg" [svgStyle]="{ 'width.px':20 }"></svg-icon>
+        </span>
+    </div>
+    <div class="controls">
+        <span class="time">0:04</span>
+        <div class="progress">
+            <div class="fill"></div>
+        </div>
+        <span class="time">6:04</span>
+    </div>
+</div>

@@ -1,0 +1,103 @@
+.playlist-container
+    height: 100%
+    width: 400px
+    background-color: #ff608f
+    margin: auto
+    margin-top: 0px
+    font-family: 'Roboto'
+    color: white
+    font-weight: 550
+
+    .playlist-header
+        display: flex
+        padding: 16px
+        background-color: #e81e62
+
+        .playlist-cover
+            height: 100px
+            width: 100px
+            background-color: white
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.10)
+
+        .playlist-details
+            width: calc(100% - 100px)
+
+            .playlist-title
+                padding-right: 15px
+                padding-left: 15px
+                color: white
+                font-size: 28px
+                margin-bottom: 12px
+
+            .playlist-description
+                padding-right: 15px
+                padding-left: 15px
+                color: white
+                font-size: 14px
+
+    .playlist-songs
+
+        .songs-header
+            padding: 14px
+            background-color: #e81e62
+            padding-bottom: 10px
+            .title
+                display: inline-block
+                width: 40%
+            .artist
+                width: 40%
+            &:hover
+                cursor: pointer
+
+        .song
+            padding: 14px
+            padding-bottom: 10px
+            display: flex
+            .title
+                display: inline-block
+                width: 40%
+            .artist
+                display: inline-block
+                width: 40%
+            svg-icon
+                display: none
+                margin-left: auto
+                color: white
+            &:hover
+                background-color: #e81e62
+                svg-icon
+                    display: inline-block
+            &.active
+                color: black
+
+.player 
+    position: fixed
+    bottom: 0
+    height: 80px
+    width: 100%
+    background-color: #e81e62
+
+    .controls
+        margin: auto
+        width: fit-content
+        margin-top: 5px
+        
+        .play-button
+            position: relative
+            top: 7px
+            margin: 15px
+        
+        .progress
+            display: inline-block
+            width: 500px
+            height: 5px
+            background-color: #769ec1
+
+            .fill
+                width: 100px
+                height: 5px
+                background-color: black
+            
+        .time
+            padding-right: 15px
+            padding-left: 15px
