@@ -38,11 +38,11 @@ export class HomeComponent {
     this.currentSong.seconds = 0;
     this.currentSong.currentSong = song;
     this.currentSong.currentLength = this.secondsToText(song.length);
-    setInterval(() => this.updateProgress(), 5);
+    setInterval(() => this.updateProgress(), 10);
   }
 
   private updateProgress() {
-    this.currentSong.seconds += 0.005;
+    this.currentSong.seconds += 0.01;
     this.currentSong.currentTime = this.secondsToText(Math.floor(this.currentSong.seconds));
     this.currentSong.percentage = (this.currentSong.seconds / this.currentSong.currentSong.length) * 100;
   }
