@@ -1,0 +1,20 @@
+<div class="player">
+    <div class="controls">
+        <span>
+            <svg-icon src="../assets/icons/step-backward-solid.svg" [svgStyle]="{ 'width.px':20 }"></svg-icon>
+        </span>
+        <span class="play-button">
+            <svg-icon src="../assets/icons/play-circle-solid.svg" [svgStyle]="{ 'width.px':40 }"></svg-icon>
+        </span>
+        <span>
+            <svg-icon src="../assets/icons/step-forward-solid.svg" [svgStyle]="{ 'width.px':20 }"></svg-icon>
+        </span>
+    </div>
+    <div class="controls">
+        <span class="time">{{currentSong.currentTime}}</span>
+        <div class="progress">
+            <div class="fill" [ngStyle]="{'width': currentSong.percentage + '%'}"></div>
+        </div>
+        <span class="time">{{currentSong.currentLength}}</span>
+    </div>
+</div>

@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { songs } from 'src/mock-data/songs';
 
 @Component({
-  selector: 'app-player',
-  templateUrl: './player.component.html',
-  styleUrls: ['./player.component.sass']
+  selector: 'app-controls',
+  templateUrl: './controls.component.html',
+  styleUrls: ['./controls.component.sass']
 })
-export class PlayerComponent {
+export class ControlsComponent {
 
   public currentSong = {
     percentage: 0,
