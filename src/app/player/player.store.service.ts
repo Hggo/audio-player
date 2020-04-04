@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { songs } from 'src/mock-data/songs';
-import { Subject } from 'rxjs';
+import { Subject, interval } from 'rxjs';
 
 
 @Injectable()
@@ -16,6 +16,8 @@ export class PlayerStoreService {
     };
 
     public songs = songs;
+    private time: any;
+    private refreshTime = 1; // 10 ms
 
     public playSong(song) {
         this.currentSong.status = 'play';
@@ -23,13 +25,13 @@ export class PlayerStoreService {
         this.currentSong.seconds = 0;
         this.currentSong.currentSong = song;
         this.currentSong.currentLength = this.secondsToText(song.length);
-        setInterval(() => this.updateProgress(), 10);
+        this.time = interval(this.refreshTime).subscribe(() => this.updateProgress());
     }
 
     private updateProgress() {
-        this.currentSong.seconds += 0.01;
-        this.currentSong.currentTime = this.secondsToText(Math.floor(this.currentSong.seconds));
+        this.currentSong.seconds += (this.refreshTime / 200);
         this.currentSong.percentage = (this.currentSong.seconds / this.currentSong.currentSong.length) * 100;
+        this.currentSong.currentTime = this.secondsToText(Math.floor(this.currentSong.seconds));
     }
 
     private secondsToText(value) {
