@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { ControlsComponent } from './controls/controls.component';
+import { PlayerStoreService } from './player.store.service';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,6 @@ import { ControlsComponent } from './controls/controls.component';
     BrowserModule,
     AngularSvgIconModule.forRoot()
   ],
-  providers: []
+  providers: [PlayerStoreService]
 })
 export class PlayerModule { }

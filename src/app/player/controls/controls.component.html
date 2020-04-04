@@ -4,7 +4,8 @@
             <svg-icon src="../assets/icons/step-backward-solid.svg" [svgStyle]="{ 'width.px':20 }"></svg-icon>
         </span>
         <span class="play-button">
-            <svg-icon src="../assets/icons/play-circle-solid.svg" [svgStyle]="{ 'width.px':40 }"></svg-icon>
+            <svg-icon *ngIf="currentSong.status === 'pause'" src="../assets/icons/play-circle-solid.svg" [svgStyle]="{ 'width.px':40 }"></svg-icon>
+            <svg-icon *ngIf="currentSong.status === 'play'" src="../assets/icons/pause-circle-regular.svg" [svgStyle]="{ 'width.px':40 }"></svg-icon>
         </span>
         <span>
             <svg-icon src="../assets/icons/step-forward-solid.svg" [svgStyle]="{ 'width.px':20 }"></svg-icon>
