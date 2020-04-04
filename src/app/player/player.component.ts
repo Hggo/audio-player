@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { songs } from 'src/mock-data/songs';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.sass']
+  selector: 'app-player',
+  templateUrl: './player.component.html',
+  styleUrls: ['./player.component.sass']
 })
 export class HomeComponent {
 
@@ -15,19 +16,7 @@ export class HomeComponent {
     currentSong: undefined
   };
 
-  public songs = [{
-    title: 'I am the Highway',
-    artist: 'Audioslave',
-    length: 180
-  }, {
-    title: 'One',
-    artist: 'Metallica',
-    length: 230
-  }, {
-    title: 'The Unforgiven',
-    artist: 'Metallica',
-    length: 130
-  }];
+  public songs = songs;
 
   constructor() {
 
